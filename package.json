@@ -32,7 +32,7 @@
         "format:prettier": "npm run prettier -- --write",
         "prettier": "prettier '**/*.{ts,md,json,yml}'",
         "build": "npm run build:cjs && npm run build:esm",
-        "build:cjs": "tsc --sourceRoot https://raw.githubusercontent.com/fb55/nth-check/$(git rev-parse HEAD)/src/",
+        "build:cjs": "tsc",
         "build:esm": "npm run build:cjs -- --module esnext --target es2019 --outDir lib/esm && echo '{\"type\":\"module\"}' > lib/esm/package.json",
         "prepare": "npm run build"
     },
